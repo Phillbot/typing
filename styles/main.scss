@@ -13,6 +13,40 @@ html,
   overflow: hidden;
 }
 
+.git {
+  font-size: 10pt;
+  transform: rotate(45deg);
+  width: 35vh;
+  position: fixed;
+  z-index: 5;
+  right: -10.5vh;
+  top: 5%;
+  height: 3vh;
+  opacity: .8;
+  background: darkorange;
+  letter-spacing: 3.5px;
+}
+
+.git:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  letter-spacing: 7.5px;
+}
+
+.git-p {
+  font-size: 12pt;
+  text-align: center;
+  color: #fff;
+}
+
+.git-p a {
+  color: #fff;
+}
+
+.git-p a:hover {
+  text-decoration: none;
+}
+
 .norelise {
   display: none;
   margin-top: 10vh;
@@ -45,15 +79,14 @@ html,
   color: #e1922c;
 }
 
-
 .share {
   position: fixed;
   right: 0;
   top: 25%;
 }
 
-.mb-row:hover{
-  transform: scale(1.2 );
+.mb-row:hover {
+  transform: scale(1.2);
   opacity: 0.8;
 }
 
@@ -126,13 +159,12 @@ footer {
 
 }
 
-
 #new-words-div {
   margin: 60px 0 60px 0;
 }
 
 .btn-in {
-  margin-top:15vh;
+  margin-top: 15vh;
 }
 
 #btn-push {
@@ -421,7 +453,7 @@ hr {
   border-left: none;
   border-right: none;
   padding: 0 3px 4px 5px;
-  border-radius:30%;
+  border-radius: 30%;
   margin: 2px;
 }
 
@@ -499,9 +531,8 @@ hr {
   text-decoration: line-through;
 }
 
-
 @media screen and (max-width: 1240px) {
-  #main, #game-main, .wrapper {
+  #main, #game-main, .wrapper, .git  {
     display: none !important;
   }
 
