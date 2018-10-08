@@ -106,6 +106,13 @@ window.onload = function () {
             }
 
 
+           //  for (let i = 0, max = wordsArr.length - 1; i <= max; i++) {
+           //
+           //      console.log(wordsArr[i].charCodeAt()); //8212 //45
+           // // – и — и -
+           //  }
+
+
             for (let i = 0, max = wordsArr.length - 1; i <= max; i++) {
                 let newElWorld = document.createElement('span');
 
@@ -136,7 +143,7 @@ window.onload = function () {
                     codes[i] = 13;
                 }
 
-                if(codes[i] === 8212) {
+                if (codes[i] === 8212 || codes[i] === 8211) {
                     codes[i] = 45;
                 }
 
