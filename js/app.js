@@ -58,7 +58,6 @@ window.onload = function () {
 
         "Удачи!";
 
-
     let delay = 30, // Скорость печатания
         elem = textArea;
 
@@ -92,6 +91,7 @@ window.onload = function () {
     });
 
     button.addEventListener('click', function () {
+
         audio.pause();
         if (textArea.value === '') {
             alert('Введите текст');
@@ -135,6 +135,12 @@ window.onload = function () {
                 if (codes[i] === 60) {
                     codes[i] = 13;
                 }
+
+                if(codes[i] === 8212) {
+                    codes[i] = 45;
+                }
+
+                //TYT Tupe
             }
 
             let spaces = [];
