@@ -444,6 +444,17 @@ hr {
 
 }
 
+.enter {
+  display: block;
+  background: url(../img/enter.png) no-repeat;
+  background-size: 100%;
+  width: 40px;
+  padding: 0;
+  margin-left: -5px;
+
+}
+
+
 .err1 {
   animation: err1-anim 2s ease-in-out infinite;
   //display: inline-block;

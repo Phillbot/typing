@@ -20,7 +20,7 @@ window.onload = function () {
         wordsArrPlace = document.getElementById('wordsArrPlace'),
         info = document.getElementById('info'),
         rules = document.getElementById('rules'),
-
+        totalSpan = document.getElementById('all-span'),
         // let about = document.getElementById('about');
         // let aboutDiv = document.getElementById('about-div');
 
@@ -121,9 +121,11 @@ window.onload = function () {
 
             }
 
-
             main.style.display = 'none';
             gameMain.style.display = 'block';
+
+
+            totalSpan.innerHTML = wordsArr.length.toString();
 
             let allWrdNow = wordsArrPlace.querySelectorAll('span');
             let countSpan = 0;
@@ -151,13 +153,21 @@ window.onload = function () {
             }
 
             let spaces = [];
-
+            let enters = [];
 
             for (let i = 0, max = allWrdNow.length - 1; i <= max; i++) {
 
-
-                if (allWrdNow[i].innerHTML === " ") { //|| allWrdNow[i].innerHTML === "<br>" для переноса
+                if (allWrdNow[i].innerHTML === " ") {
                     spaces.push(allWrdNow[i]);
+                }
+            }
+
+ //enters.push(codes[i]);
+
+            for (let i = 0, max = allWrdNow.length - 1; i <= max; i++) {
+
+                if (allWrdNow[i].innerHTML === "<br>") {
+                    enters.push(allWrdNow[i]);
                 }
             }
 
@@ -182,6 +192,18 @@ window.onload = function () {
 
                     if (statusDiv.classList.contains('off')) {
                         spaces[i].classList.remove('space');
+                    }
+
+                }
+
+
+                for (let i = 0, max = enters.length - 1; i <= max; i++) {
+                    if (statusDiv.classList.contains('on')) {
+                        enters[i].classList.add('enter');
+
+                    }
+                    if (statusDiv.classList.contains('off')) {
+                        enters[i].classList.remove('enter');
                     }
 
                 }
